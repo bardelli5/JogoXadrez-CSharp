@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace tabuleiro {
-    internal class Peca {
+    public class Peca {
 
         public Posicao posicao { get; set; }
         public Cor cor { get; protected set; }
@@ -13,6 +13,11 @@ namespace tabuleiro {
             this.cor = cor;
             this.qteMovimentos = 0;
             this.tab = tab;
+        }
+
+        public void incrementarQteMovimentos()
+        {
+            qteMovimentos++;
         }
     }
 }

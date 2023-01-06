@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace tabuleiro {
-    enum Cor {
+    public enum Cor {
         Branca,
         Preta,
         Amarela,

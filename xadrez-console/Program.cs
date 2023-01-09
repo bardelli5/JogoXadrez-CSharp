@@ -19,16 +19,7 @@ namespace xadrez_console
                         Console.Clear();
                         Tela.imprimirPartida(partida);
                         
-                        Tela.imprimirTabuleiro(partida.tab);
                         Console.WriteLine();
-
-                        Console.WriteLine("Turno: " + partida.turno);
-                        Console.WriteLine("Aguardando jogada: " + partida.jogadorAtual);
-                        if (partida.xeque)
-                        {
-                            Console.WriteLine("XEQUE!");
-                        }
-
                         Console.Write("Origem: ");
                         Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
                         partida.validarPosicaoDeOrigem(origem);
@@ -52,9 +43,9 @@ namespace xadrez_console
                         Console.WriteLine(e.Message);
                         Console.ReadLine();
                     }
-
-                    Tela.imprimirTabuleiro(partida.tab);
                 }
+                Console.Clear();
+                Tela.imprimirPartida(partida);
             }
             
             catch (TabuleiroException e)

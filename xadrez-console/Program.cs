@@ -1,7 +1,6 @@
 ﻿using System;
 using tabuleiro;
 using xadrez;
-using xadrez_console.tabuleiro;
 
 namespace xadrez_console
 {
@@ -12,11 +11,14 @@ namespace xadrez_console
             try
             {
                 PartidaDeXadrez partida = new PartidaDeXadrez();
+                
                 while (!partida.terminada)
                 {
                     try
                     {
                         Console.Clear();
+                        Tela.imprimirPartida(partida);
+                        
                         Tela.imprimirTabuleiro(partida.tab);
                         Console.WriteLine();
 
